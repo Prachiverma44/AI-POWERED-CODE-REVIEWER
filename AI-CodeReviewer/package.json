@@ -5,6 +5,13 @@
   "version": "0.0.3",
   "icon": "icon.png",
   "publisher": "prachi-verma",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Prachiverma44/Ai-code-reviewer-pro"
+  },
+
+
   "type": "module",
   "main": "./src/extension.js",
   "engines": {
