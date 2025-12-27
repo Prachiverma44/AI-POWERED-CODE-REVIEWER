@@ -1,0 +1,43 @@
+{
+  "name": "ai-code-reviewer-pro",
+  "displayName": "AI Code Reviewer Pro",
+  "description": "AI-powered code review and auto-fix using Gemini",
+  "version": "0.0.3",
+  "icon": "icon.png",
+  "publisher": "prachi-verma",
+  "type": "module",
+  "main": "./src/extension.js",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "activationEvents": [
+    "onCommand:aiCodeReviewer.reviewProject",
+    "onCommand:aiCodeReviewer.changeApiKey"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "aiCodeReviewer.reviewProject",
+        "title": "Review Project with AI"
+      },
+      {
+        "command": "aiCodeReviewer.changeApiKey",
+        "title": "Change Gemini API Key"
+      }
+    ],
+    "configuration": {
+      "title": "AI Code Reviewer Pro",
+      "properties": {
+        "aiCodeReviewer.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "Your Gemini API Key"
+        }
+      }
+    }
+  },
+  
+  "dependencies": {
+    "@google/genai": "^0.8.0"
+  }
+}
